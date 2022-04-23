@@ -10,50 +10,44 @@
 </head>
 
 <body>
-    <div class="heading"><h1>Bank Interest and Maintainence</h1></div>
-    <div class="note">
-        <h3>note:-</h3>
-        <p>-if balance is greater than 200000 then add 10% interest and deduct 0.2% maintainence Charges</p>
-        <p>-if balance is greater than 100000 and less than equal to 200000 then add 5% interest and deduct 0.05%
-            maintainence Charges</p>
-        <p>-if balance is less than equal to 100000 then add 3% interest </p>
-
-    </div>
-    <div class="container">
-        <table>
-            <tr>
-                <th>Acc Holder</td>
-                <th>Balance</td>
-                <th>Balance after Interest and Maintainence Changes</td>
-            </tr>
-            <tr>
-                <td>Account Holder 1</td>
-                <td><input id="inputBal1" type="number" min="0"></td>
-                <td id="data1"></td>
-            </tr>
-            <tr>
-                <td>Account Holder 2</td>
-                <td><input id="inputBal2" type="number" min="0"></td>
-                <td id="data2"></td>
-            </tr>
-            <tr>
-                <td>Account Holder 3</td>
-                <td><input id="inputBal3" type="number" min="0"></td>
-                <td id="data3"></td>
-            </tr>
-            <tr>
-                <td>Account Holder 4</td>
-                <td><input id="inputBal4" type="number" min="0"></td>
-                <td id="data4"></td>
-            </tr>
-            <tr>
-                <td>Account Holder 5</td>
-                <td><input id="inputBal5" type="number" min="0"></td>
-                <td id="data5"></td>
-            </tr>
-        </table>
-        <button onclick="submit()">Calculate Interest</button>
-        <script src="script.js"></script>
+    <div class="mainContainer">
+        <div class="heading">
+            <h1>Bank Interest and Maintainence</h1>
+        </div>
+        <div class="note">
+            <h3>note:-</h3>
+            <p><b>-Interest is calculated as per given rule</b></p>
+            <br>
+            <p>-if balance is greater than 200000 then add 10% interest and deduct 0.2% maintainenct Charges</p>
+            <br>
+            <p>-if balance is greater than 100000 and less than equal to 200000 then add 5% interest and deduct 0.05%
+                maintainenct Charges</p>
+            <br>
+            <p>-if balance is less than equal to 100000 then add 3% interest </p>
+        </div>
+        <div class="inputContainer">
+            <table>
+                <tr>
+                    <th>Acc Holder Name</td>
+                    <th>Balance</td>
+                </tr>
+                <tr>
+                    <td><input id="inputName" class="inputName" type="text" placeholder="Enter Name..."></td>
+                    <td><input id="inputBal" class="inputCls" type="number" placeholder="Enter Balance..." min="0"></td>
+                </tr>
+            </table>
+            <button onclick="submit()">Calculate Interest</button>
+        </div>
+        <div class="container">
+            <table id="dispData">
+                <tr>
+                    <th>Account Holder Name</td>
+                    <th>Balance</td>
+                    <th>Balance after Interest</td>
+                </tr>
+            </table>
+            <script src="script.js"></script>
+        </div>
     </div>
 </body>
 
